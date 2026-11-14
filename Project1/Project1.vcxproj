@@ -125,11 +125,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="command_allocator.cpp" />
+    <ClCompile Include="command_list.cpp" />
+    <ClCompile Include="descriptor_heap.cpp" />
     <ClCompile Include="DirectX.cpp" />
+    <ClCompile Include="fence.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="render_target.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="command_allocator.h" />
+    <ClInclude Include="command_list.h" />
+    <ClInclude Include="descriptor_heap.h" />
     <ClInclude Include="DirectX.h" />
+    <ClInclude Include="fence.h" />
+    <ClInclude Include="render_target.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
