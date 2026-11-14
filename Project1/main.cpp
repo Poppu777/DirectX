@@ -1,5 +1,9 @@
 #include <Windows.h>
 #include "DirectX.h"
+#include "descriptor_heap.h"
+#include "render_target.h"
+#include "command_list.h"
+#include "command_allocator.h"
 
 
 // ４．メッセージ受信
