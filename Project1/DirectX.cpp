@@ -57,11 +57,13 @@ bool DirectX::Initialize(HWND hwnd)
 	// 1. デバッグレイヤー
 	EnableDebugLayer();
 
+
 	// 2. DXGIファクトリー
 	if (!CreateFactory())
 	{
 		return false;
 	}
+
 
 	// 3. アダプター
 	if (!GetHardwareAdapter())
@@ -69,11 +71,13 @@ bool DirectX::Initialize(HWND hwnd)
 		return false;
 	}
 
+
 	// 4. DirectX12デバイス
 	if (!CreateD3D12Device())
 	{
 		return false;
 	}
+
 
 	// 5. コマンドキュー
 	if (!CreateCommandQueue())
@@ -81,11 +85,58 @@ bool DirectX::Initialize(HWND hwnd)
 		return false;
 	}
 
+
 	// 6. スワップチェーン
 	if (!CreateSwapChain(hwnd))
 	{
 		return false;
 	}
+
+
+	// 7. ディスクリプタヒープ
+	if (!descriptorHeap.Initialize(
+		device,
+		2))
+	{
+		return false;
+	}
+
+
+	// 8. レンダーターゲット
+	if (!renderTarget.Initialize(
+		device,
+		swapChain,
+		descriptorHeap.Get(),
+		descriptorHeap.GetDescriptorSize()))
+	{
+		return false;
+	}
+
+
+	// 9. コマンドアロケータ
+	if (!commandAllocator.Initialize(
+		device))
+	{
+		return false;
+	}
+
+
+	// 10. コマンドリスト
+	if (!commandList.Initialize(
+		device,
+		commandAllocator.Get()))
+	{
+		return false;
+	}
+
+
+	// 11. フェンス
+	if (!fence.Initialize(
+		device))
+	{
+		return false;
+	}
+
 
 	return true;
 }
