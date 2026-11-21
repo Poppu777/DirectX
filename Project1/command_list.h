@@ -5,7 +5,7 @@
 class CommandList
 {
 public:
-	CommandList();
+	CommandList() = default;
 	~CommandList();
 
 	// コマンドリストを作成

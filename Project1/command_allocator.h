@@ -5,7 +5,7 @@
 class CommandAllocator
 {
 public:
-	CommandAllocator();
+	CommandAllocator() = default;
 	~CommandAllocator();
 
 	// コマンドアロケータを作成

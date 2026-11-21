@@ -5,7 +5,7 @@
 class Fence
 {
 public:
-	Fence();
+	Fence() = default;
 	~Fence();
 
 	// ƒtƒFƒ“ƒX‚ğì¬

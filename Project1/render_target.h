@@ -6,7 +6,7 @@
 class RenderTarget
 {
 public:
-	RenderTarget();
+	RenderTarget() = default;
 	~RenderTarget();
 
 	// レンダーターゲットを作成

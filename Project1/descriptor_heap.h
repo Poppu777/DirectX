@@ -5,7 +5,7 @@
 class DescriptorHeap
 {
 public:
-	DescriptorHeap();
+	DescriptorHeap() = default;
 	~DescriptorHeap();
 
 	// RTV用ディスクリプタヒープを作成

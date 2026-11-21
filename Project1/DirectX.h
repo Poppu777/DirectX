@@ -14,7 +14,7 @@
 class DirectX
 {
 public:
-	DirectX();
+	DirectX() = default;
 	~DirectX();
 
 	// DirectX‚Ì‰Šú‰»
