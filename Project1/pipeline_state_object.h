@@ -11,5 +11,7 @@ public:
 	PipelineStateObject() = default;
 
 	~PipelineStateObject();
+
+	[[nodiscard]]bool create(const DirectX& directx,const shader& shader, const root )
 };
 
