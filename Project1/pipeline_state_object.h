@@ -12,6 +12,6 @@ public:
 
 	~PipelineStateObject();
 
-	[[nodiscard]]bool create(const DirectX& directx,const shader& shader, const root )
+	[[nodiscard]]bool create(const DirectX& directx,const shader& shader, const root_signature& rootsignature)
 };
 
