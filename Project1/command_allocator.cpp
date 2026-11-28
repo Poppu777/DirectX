@@ -8,6 +8,7 @@ CommandAllocator::CommandAllocator()
 
 CommandAllocator::~CommandAllocator()
 {
+	// コマンドアロケータの解放
 	if (commandAllocator != nullptr)
 	{
 		commandAllocator->Release();

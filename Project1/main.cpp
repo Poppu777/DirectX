@@ -4,6 +4,10 @@
 #include "render_target.h"
 #include "command_list.h"
 #include "command_allocator.h"
+#include "pipeline_state_object.h"
+#include "root_signature.h"
+#include "shader.h"
+#include "vertex_buffer.h"
 
 
 // ４．メッセージ受信
